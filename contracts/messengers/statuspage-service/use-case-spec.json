@@ -1,24 +1,43 @@
 {
-    "useCaseName": "OpenAI StatusPage",
-    "symbol": "xGPTQUALITY",
-    "sp": {
-      "name": "OpenAI GPT Quality Service Credit",
-      "symbol": "xGPTQUALITY"
-    },
-    "lp": {
-      "name": "OpenAI GPT Quality Service Credit LP",
-      "symbol": "xGPTQUALITY-LP"
-    },
-    "ownerUrl": "https://dsla.network",
-    "useCaseDocs": "https://dsla.network/metaverse",
-    "externalAdapterRepo": "https://github.com/Stacktical/",
-    "unit": "%",
-    "keywords": ["openai", "statuspage", "service", "quality"],
-    "timestamp": "2023-03-24T00:00:00+00:00",
-    "version": {
-      "major": 0,
-      "minor": 0,
-      "patch": 1
-    }
+  "useCaseName": "StatusPage Public Service Quality",
+  "symbol": "xSTATUS",
+  "sp": {
+    "name": "StatusPage Service Credit",
+    "symbol": "xSTATUS"
+  },
+  "lp": {
+    "name": "StatusPage Service Credit LP",
+    "symbol": "xSTATUS-LP"
+  },
+  "ownerUrl": "https://dsla.network",
+  "useCaseDocs": "https://dsla.network/metaverse",
+  "externalAdapterRepo": "https://github.com/Stacktical/",
+  "unit": "%",
+  "statusPageUrl": {
+    "name": "StatusPage Public API URL",
+    "type": "string",
+    "description": "The URL of the public StatusPage API being queried to calculate serviced performance"
+  },
+  "component": {
+    "name": "Affected Component(s)",
+    "type": "array",
+    "description": ""
+  },
+  "impactCutoff": {
+    "name": "Impact Cutoff",
+    "type": "string",
+    "description": "Minimum impact rating for incidents to be considered as affecting the quality of service. Classifications are: minor, major, critical."
+  },
+  "keywords": [
+    "dsla",
+    "statuspage",
+    "service",
+    "quality"
+  ],
+  "timestamp": "2023-03-24T00:00:00+00:00",
+  "version": {
+    "major": 0,
+    "minor": 0,
+    "patch": 1
   }
-  
+}

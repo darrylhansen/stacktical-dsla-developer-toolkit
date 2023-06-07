@@ -113,7 +113,7 @@ export const develop: NetworkUserConfig = {
           allowance: '10',
         },
         {
-          contract: CONTRACT_NAMES.OpenAIStatusPageOracle,
+          contract: CONTRACT_NAMES.StatusPageOracle,
           token: CONTRACT_NAMES.LinkToken,
           allowance: '10',
         },
@@ -219,7 +219,7 @@ export const develop: NetworkUserConfig = {
         dslaSpSymbol: SERVICE_CREDITS.STAKING_PARAMETRIC.DSLA_SP.symbol,
       },
       {
-        contract: CONTRACT_NAMES.OpenAIStatusPageOracle,
+        contract: CONTRACT_NAMES.StatusPageOracle,
         useCaseName: USE_CASES.STATUSPAGE_SERVICE,
         externalAdapterUrl: process.env.STATUSPAGE_SERVICE_ADAPTER,
         dslaLpName: SERVICE_CREDITS.STATUSPAGE_SERVICE.DSLA_LP.name,

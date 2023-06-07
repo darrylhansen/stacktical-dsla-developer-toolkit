@@ -19,7 +19,7 @@ import { Listener, Provider } from "@ethersproject/providers";
 import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
 import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
 
-interface OpenAIStatusPageOracleInterface extends ethers.utils.Interface {
+interface StatusPageOracleInterface extends ethers.utils.Interface {
   functions: {
     "fee()": FunctionFragment;
     "fulfillSLI(bytes32,uint256)": FunctionFragment;
@@ -234,7 +234,7 @@ export type SLIRequestedEvent = TypedEvent<
   }
 >;
 
-export class OpenAIStatusPageOracle extends BaseContract {
+export class StatusPageOracle extends BaseContract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
@@ -275,7 +275,7 @@ export class OpenAIStatusPageOracle extends BaseContract {
     toBlock?: string | number | undefined
   ): Promise<Array<TypedEvent<EventArgsArray & EventArgsObject>>>;
 
-  interface: OpenAIStatusPageOracleInterface;
+  interface: StatusPageOracleInterface;
 
   functions: {
     fee(overrides?: CallOverrides): Promise<[BigNumber]>;

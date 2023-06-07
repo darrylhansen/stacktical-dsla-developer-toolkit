@@ -43,7 +43,7 @@ export enum CONTRACT_NAMES {
   StakingUptimeOracle = 'StakingUptimeOracle',
   InflationOracle = 'InflationOracle',
   StakingParametricOracle = 'StakingParametricOracle',
-  OpenAIStatusPageOracle = 'OpenAIStatusPageOracle',
+  StatusPageOracle = 'StatusPageOracle',
 }
 
 export enum TOKEN_NAMES {
@@ -222,7 +222,7 @@ export const SERVICE_CREDITS = {
     },
     DSLA_SP: {
       name: STAKING_REWARDS_SPECS.sp.name,
-      symbol:  STAKING_REWARDS_SPECS.sp.symbol,
+      symbol: STAKING_REWARDS_SPECS.sp.symbol,
     },
   },
   STAKING_UPTIME: {
