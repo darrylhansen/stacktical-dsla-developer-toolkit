@@ -45,6 +45,7 @@ export enum CONTRACT_NAMES {
   StakingParametricOracle = 'StakingParametricOracle',
   L2UptimeOracle = 'L2UptimeOracle',
   OpenAIStatusPageOracle = 'OpenAIStatusPageOracle',
+  TravelRedstoneOracle = 'TravelRedstoneOracle'
 }
 
 export enum TOKEN_NAMES {
@@ -83,6 +84,7 @@ export enum USE_CASES {
   STAKING_PARAMETRIC = 'staking-parametric',
   L2_UPTIME = 'l2-uptime',
   STATUSPAGE_SERVICE = 'statuspage-service',
+  TRAVEL_REDSTONE = 'travel-redstone',
 }
 
 export const STAKING_REWARDS_SPECS = JSON.parse(
@@ -139,6 +141,13 @@ const STATUSPAGE_SERVICE_SPECS = JSON.parse(
   // @ts-ignore
   fs.readFileSync(
     `${appRoot.path}/contracts/messengers/${USE_CASES.STATUSPAGE_SERVICE}/use-case-spec.json`
+  )
+);
+
+const TRAVEL_REDSTONE_SPECS = JSON.parse(
+  // @ts-ignore
+  fs.readFileSync(
+    `${appRoot.path}/contracts/messengers/${USE_CASES.TRAVEL_REDSTONE}/use-case-spec.json`
   )
 );
 
@@ -306,6 +315,16 @@ export const SERVICE_CREDITS = {
     DSLA_SP: {
       name: STATUSPAGE_SERVICE_SPECS.sp.name,
       symbol: STATUSPAGE_SERVICE_SPECS.sp.symbol,
+    },
+  },
+  TRAVEL_REDSTONE: {
+    DSLA_LP: {
+      name: TRAVEL_REDSTONE_SPECS.lp.name,
+      symbol: TRAVEL_REDSTONE_SPECS.lp.symbol,
+    },
+    DSLA_SP: {
+      name: TRAVEL_REDSTONE_SPECS.sp.name,
+      symbol: TRAVEL_REDSTONE_SPECS.sp.symbol,
     },
   },
 };

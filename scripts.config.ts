@@ -1009,5 +1009,38 @@ export const scripts: ScriptsConfiguration = {
         serviceSliMockingPlan: [5, 15, 25],
       },
     },
+    // INDEX 34, Test for Redstone Travel Oracle
+    {
+      sloValue: 100,
+      sloType: SLO_TYPE.GreaterOrEqualTo,
+      whitelisted: false,
+      periodType: PERIOD_TYPE.WEEKLY,
+      messengerContract: CONTRACT_NAMES.TravelRedstoneOracle,
+      initialPeriodId: 0,
+      finalPeriodId: 2,
+      severity: [14000, 41000, 70000], // [14%, 41%, 70%] (1000 == 1%) [1-2 days (out of 7) poor weather, 3-4 days, 5+ days]
+      penalty: [1000, 10000, 25000], // [1%, 10%, 25%]
+      initialTokenSupply: '0',
+      initialTokenSupplyDivisor: 100,
+      deployerStakeTimes: 100,
+      notDeployerStakeTimes: 1,
+      leverage: 1,
+      serviceMetadata: {
+        serviceName: 'Travel Coverage - Not Respected Case ',
+        serviceDescription: 'SLA for Travel Coverage',
+        serviceImage: 'https://via.placeholder.com/1200x600',
+        serviceURL: 'https://xceltrip.com/',
+        serviceAddress: '0x0000000000000000000000000000000000000000',
+        serviceTicker: 'xMILES',
+        coverageType: 'precipitation',
+        tripStartDate: 1668988800, // 21-Nov-2022
+        tripEndDate: 1670025600, // 03-Dec-2022
+        maxDeviation: 1000000, // max deviation 1%
+        coordinates: { 'lat': 40.7128, 'long': -74.0060 },
+        location: 'New York, NY',
+        serviceUseTestExternalAdapter: true,
+        serviceSliMockingPlan: [1000, 41000, 70000],
+      },
+    },
   ],
 };

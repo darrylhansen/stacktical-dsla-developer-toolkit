@@ -1,0 +1,60 @@
+{
+    "useCaseName": "DSLA Linea Testnet Travel Coverage",
+    "symbol": "xMILES",
+    "sp": {
+        "name": "xMILES Service Credit",
+        "symbol": "xMILES"
+    },
+    "lp": {
+        "name": "xMILES Service Credit LP",
+        "symbol": "xMILES-LP"
+    },
+    "ownerUrl": "https://dsla.network",
+    "useCaseDocs": "https://dsla.network/metaverse",
+    "externalAdapterRepo": "https://github.com/Stacktical/",
+    "unit": "%",
+    "coverageType": {
+        "name": "Coverage Type",
+        "type": "string",
+        "description": "The type of parameter being covered by the SLA. ie. temperature, precipitation, cloudcover, flightdelay, luggagedelay, etc."
+    },
+    "tripStartDate": {
+        "name": "Trip Start Date",
+        "type": "number",
+        "description": "The start date of the trip that is being covered by the SLA, as a Unix timestamp, to allow personalized SLAs that do not align exactly with Period Dates from the PeriodRegistry."
+    },
+    "tripEndDate": {
+        "name": "Trip End Date",
+        "type": "number",
+        "description": "The end date of the trip that is being covered by the SLA, as a Unix timestamp, to allow personalized SLAs that do not align exactly with Period Dates from the PeriodRegistry."
+    },
+    "location": {
+        "name": "Location",
+        "type": "string",
+        "description": "The human-readable location for the weather monitoring"
+    },
+    "coordinates": {
+        "name": "Coordinates",
+        "type": "object",
+        "description": "The latitude and longitude coordinates for the selected location weather monitoring"
+    },
+    "maxDeviation": {
+        "name": "Maximum Deviation",
+        "type": "number",
+        "description": "The maximum deviation from historical normal temperature and precipitation for the selected location"
+    },
+    "keywords": [
+        "xMILE",
+        "travel",
+        "weather",
+        "experience",
+        "climate",
+        "guarantee"
+    ],
+    "timestamp": "2023-03-24T00:00:00+00:00",
+    "version": {
+        "major": 0,
+        "minor": 0,
+        "patch": 1
+    }
+}
